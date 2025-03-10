@@ -6,12 +6,27 @@ import { Image } from 'astro:assets';
 import data_billede from "../assets/images/data_billede.webp";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Udviklingen i Folkekirken-medlemskab</h1>
-		
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={data_billede} alt=""></Image>
-		<p> Viser udviklingen i Folkekirken-medlemmer (grøn) og ikke-medlemmer (rød). Selvom befolkningen vokser, falder antallet af medlemmer en smule, mens ikke-medlemmer stiger markant.</p>
-		<Button>Læs mere</Button>
-	</article>
+  <article class="bg-white text-black max-w-4xl mx-auto p-6">
+    <!-- Overskrift -->
+    <h1 class="text-3xl font-bold mb-6 leading-tight">Udviklingen i Folkekirken-medlemskab</h1>
+    
+    <!-- Billede -->
+    <Image src={data_billede} alt="Billede" class="w-full rounded-lg shadow-md mb-6" />
+    
+    <!-- Brødtekst -->
+    <p class="text-lg leading-relaxed mb-6">
+      Viser udviklingen i Folkekirken-medlemmer <span class="text-green-600 font-semibold">(grøn)</span> og ikke-medlemmer 
+      <span class="text-red-600 font-semibold">(rød)</span>. Selvom befolkningen vokser, falder antallet af medlemmer en smule, 
+      mens ikke-medlemmer stiger markant.
+    </p>
+    
+    <!-- Knappen centreret -->
+    <div class="flex justify-center mt-6">
+      <Button class="px-6 py-3 bg-gray-300 text-black font-semibold rounded-lg hover:bg-gray-400 transition-colors duration-200">
+        Læs mere
+      </Button>
+    </div>
+  </article>
 </MainLayout>
+
+
